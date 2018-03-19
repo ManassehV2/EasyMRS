@@ -1,0 +1,329 @@
+﻿@model EasyMRS.Models.ViewModels.PatientDetail
+
+@{
+    ViewBag.Title = "PatientDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int age =  (DateTime.Today.Year - Convert.ToDateTime(Model.p.BirthDate).Year);
+}
+
+
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title mb-3">Patient Detail</strong>
+        </div>
+        <div class="card-body">
+            <div class="mx-auto d-block">
+                <img class="rounded-circle mx-auto d-block" src="images/admin.jpg" alt="Card image cap">
+                <h5 class="text-sm-center mt-2 mb-1">@Model.p.FName  @Model.p.MName</h5>
+                <div class="location text-sm-center">Birth Date:@Convert.ToDateTime(@Model.p.BirthDate).Year (@age years Old)</div>
+            </div>
+            <hr>
+            <div class="card-text text-sm-center">         
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">DIAGNOSES</strong>
+        </div>
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">LATEST OBSERVATIONS</strong>
+        </div>
+        <div class="card-body">
+           
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title"> HEALTH TREND SUMMARY</strong>
+        </div>
+        <div class="card-body">
+           
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title"> WEIGHT GRAPH</strong>
+        </div>
+        <div class="card-body">
+           
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">
+                Vitals<small>
+                    <button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#largeModalvital">
+                        ADD
+                    </button>
+                </small>
+            </strong>
+        </div>
+        <div class="card-body">
+            
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">APPOINTMENTS</strong>
+        </div>
+        <div class="card-body">
+            
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">RECENT VISITS</strong>
+        </div>
+        <div class="card-body">
+           
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">ALLERGIES <small><button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#largeModal">
+    ADD</button></small></strong>
+        </div>
+        <div class="card-body">
+            @{
+               
+            }
+            @foreach (AandmdReaction item in ViewBag.allergies)
+            {
+                @item.Name <b>=></b> @item.reactions <b>=></b> @item.Severity <br />
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="largeModalLabel">Add New Allergy</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="~/Registrar/AddAllergy">
+                <input type="hidden" name="PID" value="@Model.p.PID"  />
+
+                <div class="modal-body">
+                    <div class="default-tab col-lg-6">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">DRUG</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">FOOD</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">OTHER</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                @foreach (var da in Model.DrugAllergies)
+                                {
+                                    <input type="radio" name="AL" value=@da.AID />@da.Name <br />
+                                
+                                }
+                                <input type="radio" name="AL" />Other <input type="text" name="LA" />
+
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                @foreach (var fa in Model.FoodAllergies)
+                                {
+                                     <input type="radio" name="AL" value=@fa.AID />@fa.Name <br />
+                                }
+                                <input type="radio" name="AL" />Other <input type="text" name="LA" />
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                @foreach (var oa in Model.OtherAllergies)
+                                {
+                                    <input type="radio" name="AL" value=@oa.AID />@oa.Name <br />
+                                }
+                                <input type="radio" name="AL" />Other <input type="text" name="LA" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-6">
+                        <div class="card-body">
+                            <h3>Severity:</h3><br />
+                            <input type="radio" name="severity" value="Mile" />Mild<br />
+                            <input type="radio" name="severity" value="Moderate" />Moderate <br />
+                            <input type="radio" name="severity" value="Severe"/> Severe
+
+                        </div>
+
+                    </div>    
+                    
+                    <div class="col-md-5 col-lg-6">
+                        <div class="card-body">
+                            <h3>Reaction:</h3>
+                            @for (int i = 0; i < @Model.getAllergiesReaction().Length; i++)
+                            {
+                                <input type="checkbox" name="AR" value=@Model.getAllergiesReaction()[i] /> @Model.getAllergiesReaction()[i] <br />
+                            }
+                            <input type="radio" name="AR" />Other <input type="text" name="LR" />
+
+                        </div>
+
+                    </div>
+                    
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="largeModalvital" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="largeModalLabel">Add New Vitals</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="/Registrar/AddVital">
+                <input type="hidden" name="PID" value=@Model.p.PID />
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class=" form-control-label">Height(cm):</label><input type="text" name="height" class="form-control" placeholder="(cm)" />
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Weight (kg):</label><input type="text" name="weight" class="form-control" placeholder="(kg)" />
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Temperature (C):</label><input type="text" name="temp" class="form-control" placeholder="(C)" />
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Pulse:</label><input type="text" name="pulse" class="form-control" placeholder="(/min)" />
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Respiratory rate:</label><input type="text" name="RRate" class="form-control" placeholder="(/min)" />
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Blood Pressure:</label><input type="text" name="Cistol" class="form-control" />(/)<input type="text" name="diastol" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Blood oxygen saturation:</label><input type="text" name="BOS" class="form-control" placeholder="(%)" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </form>  
+            </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="staticModalDelete" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticModalLabel">Static Modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="~/Registrar/DeletePatient">
+                <input type="hidden" name="PID" value="@Model.p.PID" />
+                <div class="modal-body">
+                    <p>
+                        Are you sure you want to delete this patient?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="staticModaldeciced" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticModalLabel">Static Modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="~/Registrar/markPatienDecesed">
+                <input type="hidden" name="PID" value="@Model.p.PID" />
+                <div class="modal-body">
+                    <p>
+                        Are you sure you want to mark <b>@Model.p.FName   @Model.p.LName</b> as Deceased?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </form>
+        </div>
+       
+    </div>
+</div>
+
+<div class="modal fade" id="staticModalstartVisit" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticModalLabel">Static Modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="~/Registrar/StartNewVisit">
+                <input type="hidden" name="PID" value="@Model.p.PID" />
+                <div class="modal-body">
+                    <p>
+                        Are you sure you want to Start a visit for <b>@Model.p.FName   @Model.p.LName</b> now?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

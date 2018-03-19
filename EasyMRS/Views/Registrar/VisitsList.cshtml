@@ -1,0 +1,43 @@
+﻿@model IEnumerable<EasyMRS.Models.Visit>
+
+@{
+    ViewBag.Title = "VisitsList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>VisitsList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+                    <table id="grid-basic" class="display table table-condensed" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Visit Start Date</th>
+            <th>Visit End Date</th>
+            <th>Visit Note</th>
+            <th>Diagnosis</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.VisitStartDate</td>
+            <td>@item.VisitEndDate</td>
+            <td>@item.VisitNote</td>
+            <td>@item.PID</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#grid-basic").DataTable();
+    });
+
+</script>
+
+

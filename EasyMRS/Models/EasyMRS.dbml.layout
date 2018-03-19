@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.5, 12.625" name="EasyMRS">
+  <DataContextMoniker Name="/EasyMRSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="23c1c875-9cfd-4c69-a1f7-0fa666fb2951" absoluteBounds="8.75, 1.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/EasyMRSDataContext/AllegiesCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5befe53c-0304-422d-a602-d14ae7036ff2" absoluteBounds="8.765, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cd2b316-d8b1-43d5-b3c5-8149ccdc3f32" absoluteBounds="11.5, 1, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/EasyMRSDataContext/Allergy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15cc1063-6fa2-4961-8061-92b10a525acd" absoluteBounds="11.515, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24bb48f5-0623-4e18-a7de-67d191921214" absoluteBounds="0.75, 5.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/EasyMRSDataContext/Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="476e9639-7b84-42d2-80de-1bbabd27339f" absoluteBounds="0.765, 5.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="edc688ad-b9ff-43f1-91ef-45f9dab80936" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/EasyMRSDataContext/Diagnosi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd673cb0-19fa-4d51-9a5c-3c7227d92e6e" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="528093cf-3747-40fc-86a1-21446e83caee" absoluteBounds="9.25, 4.375, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/EasyMRSDataContext/Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75458beb-99f7-4e1d-9ad8-1df844123cf8" absoluteBounds="9.265, 4.835, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="05d75705-83e8-418e-b083-43180fb9b20f" absoluteBounds="14.25, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EasyMRSDataContext/PatientAllergy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6c0ee8a-0395-48bd-b16b-dc004126f8df" absoluteBounds="14.265, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fa54fcb4-3dc7-4d92-94e1-3b26bc34c59f" absoluteBounds="0.75, 8.75, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/EasyMRSDataContext/Physician" />
+      <nestedChildShapes>
+        <elementListCompartment Id="238fe7f4-5914-40a4-bfbf-4c605b8420ec" absoluteBounds="0.765, 9.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d38b574-d26c-4aab-b025-54fa3014b34a" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EasyMRSDataContext/PrescribedDrug" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3e0bde8-c6f7-49a4-a19f-257cebc9649e" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="961c2479-2f97-49af-ae6f-e5e9e3468b7a" absoluteBounds="6.25, 6.25, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/EasyMRSDataContext/Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="406a4edc-e79a-408b-b984-aa67a7e18329" absoluteBounds="6.265, 6.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f397987a-b634-4677-bd4d-6bc739b34609" absoluteBounds="3.5, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EasyMRSDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="563673d9-28be-446c-af2f-b1aef2383fd0" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3784507e-fd85-4139-b6fd-b20de257ae5f" absoluteBounds="3.5, 6.25, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/EasyMRSDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8965596c-d938-4879-909f-737e7a15dc7e" absoluteBounds="3.515, 6.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e11e427-a293-4770-a914-f06f75c61320" absoluteBounds="6.25, 3.375, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/EasyMRSDataContext/UsersInRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a17f276-1be0-44c4-999e-0f93e10e6db8" absoluteBounds="6.265, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d3ea78e-8d2f-47af-94af-8021631a40d2" absoluteBounds="6.75, 9.75, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/EasyMRSDataContext/Vital" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32913630-4c6c-414d-b278-7eac002ad0a9" absoluteBounds="6.765, 10.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.75 : 1.72199625651042); (11.5 : 1.72199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EasyMRSDataContext/AllegiesCategory/AllegiesCategory_Allergy" />
+      <nodes>
+        <classShapeMoniker Id="23c1c875-9cfd-4c69-a1f7-0fa666fb2951" />
+        <classShapeMoniker Id="7cd2b316-d8b1-43d5-b3c5-8149ccdc3f32" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.85179768880208); (9.25 : 5.85179768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EasyMRSDataContext/Application/Application_Membership" />
+      <nodes>
+        <classShapeMoniker Id="24bb48f5-0623-4e18-a7de-67d191921214" />
+        <classShapeMoniker Id="528093cf-3747-40fc-86a1-21446e83caee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5 : 1.69314697265625); (13.7916666666667 : 1.69314697265625 : JumpStart); (13.9583333333333 : 1.69314697265625 : JumpEnd); (14.25 : 1.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EasyMRSDataContext/Allergy/Allergy_PatientAllergy" />
+      <nodes>
+        <classShapeMoniker Id="7cd2b316-d8b1-43d5-b3c5-8149ccdc3f32" />
+        <classShapeMoniker Id="05d75705-83e8-418e-b083-43180fb9b20f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.25); (1.75 : 4.5624995); (3.5 : 4.5624995)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EasyMRSDataContext/Application/Application_Role" />
+      <nodes>
+        <classShapeMoniker Id="24bb48f5-0623-4e18-a7de-67d191921214" />
+        <classShapeMoniker Id="f397987a-b634-4677-bd4d-6bc739b34609" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.59375 : 8.02089680989583); (3.59375 : 8.35419890494792); (9.25 : 8.35419890494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EasyMRSDataContext/User/User_Membership" />
+      <nodes>
+        <classShapeMoniker Id="3784507e-fd85-4139-b6fd-b20de257ae5f" />
+        <classShapeMoniker Id="528093cf-3747-40fc-86a1-21446e83caee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.13544840494792); (6.25 : 7.13544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EasyMRSDataContext/User/User_Profile" />
+      <nodes>
+        <classShapeMoniker Id="3784507e-fd85-4139-b6fd-b20de257ae5f" />
+        <classShapeMoniker Id="961c2479-2f97-49af-ae6f-e5e9e3468b7a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.44314697265625); (3.5 : 6.44314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EasyMRSDataContext/Application/Application_User" />
+      <nodes>
+        <classShapeMoniker Id="24bb48f5-0623-4e18-a7de-67d191921214" />
+        <classShapeMoniker Id="3784507e-fd85-4139-b6fd-b20de257ae5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.22199625651042); (6.25 : 4.22199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EasyMRSDataContext/Role/Role_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="f397987a-b634-4677-bd4d-6bc739b34609" />
+        <classShapeMoniker Id="7e11e427-a293-4770-a914-f06f75c61320" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.25); (5.875 : 5.875); (5.875 : 3.76724612825521); (6.25 : 3.76724612825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EasyMRSDataContext/User/User_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="3784507e-fd85-4139-b6fd-b20de257ae5f" />
+        <classShapeMoniker Id="7e11e427-a293-4770-a914-f06f75c61320" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="87c9f40e-ed38-4ac5-9e1e-08ef6a8f3552" absoluteBounds="12.25, 9.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/EasyMRSDataContext/Patient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f323e3bf-b0ac-4b8e-b92a-dd6bd4782ab6" absoluteBounds="12.265, 10.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.875 : 9.625); (13.875 : 0.90625); (14.25 : 0.90625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EasyMRSDataContext/Patient/Patient_PatientAllergy" />
+      <nodes>
+        <classShapeMoniker Id="87c9f40e-ed38-4ac5-9e1e-08ef6a8f3552" />
+        <classShapeMoniker Id="05d75705-83e8-418e-b083-43180fb9b20f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2a35c3c8-341f-4220-808c-bf8664d17519" absoluteBounds="9.875, 9.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EasyMRSDataContext/Visit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08f30ca5-b7db-4bf4-b162-a0487ab61258" absoluteBounds="9.89, 10.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,19 @@
+﻿@using System.Web.Security
+
+@if (this.Request.IsAuthenticated)
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li class="user-header">
+            <a href="#">Welcome <b> @Membership.GetUser().UserName!</b></a>
+        </li>
+        <li><a href="~/Account/LogOut"><i class="fa fa-sign-out"></i> <span>Log Out</span></a></li>
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li class="control-label">
+            <a href="~/Accounts/LogIn"><i class="fa fa-sign-in"></i> <span>Log in</span> </a>
+        </li>
+    </ul>
+}
